@@ -21,6 +21,9 @@ jobs:
           mkdir -p "$(nodenv root)"/plugins
           git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
 
+      - name: Install node
+        run: nodenv install -s
+
       - name: Run nodenv init
         run: |
           echo "$(nodenv root)"/shims >> $GITHUB_PATH
