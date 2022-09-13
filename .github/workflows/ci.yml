@@ -24,6 +24,10 @@ jobs:
       - name: Install node
         run: nodenv install -s
 
+      - name: Dump nodenv init
+        run: nodenv init -
+
+
       - name: Run nodenv init
         run: |
           echo "$(nodenv root)"/shims >> $GITHUB_PATH
